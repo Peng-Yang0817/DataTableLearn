@@ -18,7 +18,8 @@ namespace WebApplication2
             // 準備好可進行生產時，請使用 https://modernizr.com 的建置工具，只挑選您需要的測試。
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
-            //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            //Include就是將底下的路徑打包成小括弧內的樣子，因此用打包起來的名子就會回應對應的路徑
+            //也可以稱之為虛擬路徑名稱
             bundles.Add(new ScriptBundle("~/bundles/DataTables").Include(
                         "~/Scripts/DataTables/jquery.dataTables.min.js"));
 
@@ -29,8 +30,8 @@ namespace WebApplication2
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
             //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-            bundles.Add(new ScriptBundle("~/bundles/DataTables/css").Include(
-                "~/Content/DataTables/css/jquery.dataTables.min.css"));
+            bundles.Add(new StyleBundle("~/DataTables/css").Include(
+                      "~/Content/DataTables/css/jquery.dataTables.min.css"));
         }
     }
 }
