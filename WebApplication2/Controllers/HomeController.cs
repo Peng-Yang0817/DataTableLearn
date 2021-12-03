@@ -24,6 +24,10 @@ namespace WebApplication2.Controllers
         {
             return View();
         }
+        public ActionResult Index5()
+        {
+            return View();
+        }
         public ActionResult Index6()
         {
             return View();
