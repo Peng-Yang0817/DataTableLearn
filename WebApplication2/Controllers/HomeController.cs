@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MvcApp.Filter;
 
 namespace WebApplication2.Controllers
 {
+    [MyResultFilter]
     public class HomeController : Controller
     {
         public ActionResult Index1()
